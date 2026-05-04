@@ -48,6 +48,13 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Studio Ligjore Cakrani" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Studio Ligjore Cakrani — Excellence in Legal Representation" },
+      { name: "twitter:title", content: "Studio Ligjore Cakrani — Excellence in Legal Representation" },
+      { name: "description", content: "Cakrani Legal Brilliance is a professional, modern one-page website for a law firm." },
+      { property: "og:description", content: "Cakrani Legal Brilliance is a professional, modern one-page website for a law firm." },
+      { name: "twitter:description", content: "Cakrani Legal Brilliance is a professional, modern one-page website for a law firm." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c70a10e8-9c07-46f9-9d36-26167e4e7c47/id-preview-04e51b1d--2103d326-1669-4e6e-80da-6e02d1796be0.lovable.app-1777921572696.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c70a10e8-9c07-46f9-9d36-26167e4e7c47/id-preview-04e51b1d--2103d326-1669-4e6e-80da-6e02d1796be0.lovable.app-1777921572696.png" },
     ],
     links: [
       {
