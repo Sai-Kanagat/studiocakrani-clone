@@ -103,6 +103,3 @@ function RootComponent() {
   );
 }
 
-function _unused() {
-  return null;
-}
