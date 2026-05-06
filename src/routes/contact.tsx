@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 import { useT } from "@/i18n/LanguageProvider";
 import { Button } from "@/components/ui/button";
@@ -46,16 +46,19 @@ function ContactPage() {
       city: t("office.tirane"),
       addr: t("office.tirane.addr"),
       map: "https://www.google.com/maps?q=Kompleksi+Kika+2+Tirana&output=embed",
+      link: "https://maps.app.goo.gl/DYeqX4LYNmn48ot29",
     },
     {
       city: t("office.vlore"),
       addr: t("office.vlore.addr"),
       map: "https://www.google.com/maps?q=Rruga+Sali+Hali+Kokonodi+Vlore&output=embed",
+      link: "https://maps.app.goo.gl/rCrW2tfPkX8bMsPz5",
     },
     {
       city: t("office.fier"),
       addr: t("office.fier.addr"),
       map: "https://www.google.com/maps?q=Gjykata+e+Shkalles+se+Pare+Fier&output=embed",
+      link: "https://maps.app.goo.gl/jrn2GHcBiWGqRsxP7",
     },
   ];
 
@@ -78,8 +81,9 @@ function ContactPage() {
 
   return (
     <>
-      <section className="bg-primary py-20 text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-navy py-20 text-primary-foreground">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:24px_24px]" />
+        <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl sm:text-5xl">{t("contact.title")}</h1>
           <div className="mx-auto mt-4 h-px w-16 bg-accent" />
           <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
@@ -151,18 +155,24 @@ function ContactPage() {
           <div className="mx-auto mt-3 h-px w-16 bg-accent" />
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {offices.map((o) => (
-              <div
+              <a
                 key={o.city}
-                className="overflow-hidden rounded-lg border border-border bg-card shadow-sm"
+                href={o.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-xl"
               >
-                <iframe
-                  title={`Map ${o.city}`}
-                  src={o.map}
-                  className="h-48 w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-                <div className="p-5">
+                <div className="relative">
+                  <iframe
+                    title={`Map ${o.city}`}
+                    src={o.map}
+                    className="pointer-events-none h-48 w-full"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/10" />
+                </div>
+                <div className="flex items-start justify-between gap-3 p-5">
                   <div className="flex items-start gap-2">
                     <MapPin className="mt-0.5 h-5 w-5 text-accent" />
                     <div>
@@ -170,8 +180,9 @@ function ContactPage() {
                       <p className="text-sm text-muted-foreground">{o.addr}</p>
                     </div>
                   </div>
+                  <ExternalLink className="mt-1 h-4 w-4 text-muted-foreground transition-colors group-hover:text-accent" />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
