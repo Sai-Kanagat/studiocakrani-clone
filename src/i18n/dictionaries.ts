@@ -56,6 +56,12 @@ export const dictionaries: Record<Lang, Dict> = {
     "why.discretion.desc": "Diskrecion absolut dhe komunikim i drejtpërdrejtë me avokatin tuaj.",
 
     "testimonials.title": "Çfarë Thonë Klientët",
+    "testimonials.1.quote": "Profesionalizëm i jashtëzakonshëm dhe rezultate konkrete. Më ndjeva i mbrojtur në çdo hap.",
+    "testimonials.1.role": "Klient privat",
+    "testimonials.2.quote": "Studio Cakrani na ofroi konsulencë të pazëvendësueshme në një çështje komplekse tregtare.",
+    "testimonials.2.role": "Drejtues biznesi",
+    "testimonials.3.quote": "Përfaqësim i përsosur deri në Strasburg. Etikë, përkushtim dhe njohuri të thella ligjore.",
+    "testimonials.3.role": "Klient ndërkombëtar",
 
     "about.title": "Kujtim Cakrani",
     "about.role": "Avokat & Themelues",
@@ -132,6 +138,12 @@ export const dictionaries: Record<Lang, Dict> = {
     "why.discretion.desc": "Absolute discretion and direct communication with your lawyer.",
 
     "testimonials.title": "What Clients Say",
+    "testimonials.1.quote": "Exceptional professionalism and concrete results. I felt protected at every step.",
+    "testimonials.1.role": "Private client",
+    "testimonials.2.quote": "Studio Cakrani provided invaluable counsel on a complex commercial matter.",
+    "testimonials.2.role": "Business executive",
+    "testimonials.3.quote": "Flawless representation all the way to Strasbourg. Ethics, dedication and deep legal knowledge.",
+    "testimonials.3.role": "International client",
 
     "about.title": "Kujtim Cakrani",
     "about.role": "Attorney & Founder",
@@ -208,6 +220,12 @@ export const dictionaries: Record<Lang, Dict> = {
     "why.discretion.desc": "Discrezione assoluta e comunicazione diretta con il vostro avvocato.",
 
     "testimonials.title": "Cosa Dicono i Clienti",
+    "testimonials.1.quote": "Professionalità eccezionale e risultati concreti. Mi sono sentito tutelato in ogni fase.",
+    "testimonials.1.role": "Cliente privato",
+    "testimonials.2.quote": "Lo Studio Cakrani ci ha offerto una consulenza preziosa in una complessa controversia commerciale.",
+    "testimonials.2.role": "Dirigente d'azienda",
+    "testimonials.3.quote": "Rappresentanza impeccabile fino a Strasburgo. Etica, dedizione e profonda competenza giuridica.",
+    "testimonials.3.role": "Cliente internazionale",
 
     "about.title": "Kujtim Cakrani",
     "about.role": "Avvocato e Fondatore",
