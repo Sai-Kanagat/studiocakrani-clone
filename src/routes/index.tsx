@@ -92,24 +92,9 @@ function Home() {
   ];
 
   const testimonials = [
-    {
-      name: "A. Hoxha",
-      role: "Klient privat",
-      quote:
-        "Profesionalizëm i jashtëzakonshëm dhe rezultate konkrete. Më ndjeva i mbrojtur në çdo hap.",
-    },
-    {
-      name: "M. Beci",
-      role: "Drejtues biznesi",
-      quote:
-        "Studio Cakrani na ofroi konsulencë të pazëvendësueshme në një çështje komplekse tregtare.",
-    },
-    {
-      name: "E. Lleshi",
-      role: "Klient ndërkombëtar",
-      quote:
-        "Përfaqësim i përsosur deri në Strasburg. Etikë, përkushtim dhe njohuri të thella ligjore.",
-    },
+    { name: "A. Hoxha", role: t("testimonials.1.role"), quote: t("testimonials.1.quote") },
+    { name: "M. Beci", role: t("testimonials.2.role"), quote: t("testimonials.2.quote") },
+    { name: "E. Lleshi", role: t("testimonials.3.role"), quote: t("testimonials.3.quote") },
   ];
 
   return (
