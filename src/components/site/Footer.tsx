@@ -37,18 +37,18 @@ export function Footer() {
         <div>
           <h4 className="font-serif text-accent">{t("contact.offices")}</h4>
           <ul className="mt-3 space-y-2 text-sm text-primary-foreground/80">
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <span>{t("office.tirane.addr")}</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <span>{t("office.vlore.addr")}</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <span>{t("office.fier.addr")}</span>
-            </li>
+            {[
+              { addr: t("office.tirane.addr"), link: "https://maps.app.goo.gl/DYeqX4LYNmn48ot29" },
+              { addr: t("office.vlore.addr"), link: "https://maps.app.goo.gl/rCrW2tfPkX8bMsPz5" },
+              { addr: t("office.fier.addr"), link: "https://maps.app.goo.gl/jrn2GHcBiWGqRsxP7" },
+            ].map((o) => (
+              <li key={o.link} className="flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <a href={o.link} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                  {o.addr}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
