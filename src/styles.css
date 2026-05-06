@@ -69,29 +69,36 @@
 :root {
   --radius: 0.625rem;
   /* Studio Ligjore Cakrani — Navy / Charcoal / Gold / Ivory */
-  --background: oklch(0.985 0.005 85);            /* ivory */
-  --foreground: oklch(0.22 0.03 260);             /* charcoal/navy text */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 260);
-  --primary: oklch(0.24 0.07 260);                /* deep navy #0A1F44 */
-  --primary-foreground: oklch(0.985 0.005 85);
-  --secondary: oklch(0.95 0.01 80);               /* warm light */
-  --secondary-foreground: oklch(0.24 0.07 260);
-  --muted: oklch(0.95 0.01 80);
-  --muted-foreground: oklch(0.45 0.02 260);
-  --accent: oklch(0.74 0.11 80);                  /* gold #C8A55B */
-  --accent-foreground: oklch(0.22 0.03 260);
+  --background: oklch(0.975 0.008 85);            /* warm ivory */
+  --foreground: oklch(0.20 0.03 260);             /* deep charcoal/navy text */
+  --card: oklch(0.995 0.004 85);
+  --card-foreground: oklch(0.20 0.03 260);
+  --popover: oklch(0.995 0.004 85);
+  --popover-foreground: oklch(0.20 0.03 260);
+  --primary: oklch(0.20 0.06 265);                /* deeper midnight navy */
+  --primary-foreground: oklch(0.97 0.01 85);
+  --secondary: oklch(0.93 0.012 82);              /* champagne */
+  --secondary-foreground: oklch(0.20 0.06 265);
+  --muted: oklch(0.94 0.01 82);
+  --muted-foreground: oklch(0.42 0.02 260);
+  --accent: oklch(0.72 0.12 78);                  /* richer gold */
+  --accent-foreground: oklch(0.18 0.04 265);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.9 0.01 80);
-  --input: oklch(0.9 0.01 80);
-  --ring: oklch(0.74 0.11 80);
-  --gold: oklch(0.74 0.11 80);
-  --gold-foreground: oklch(0.22 0.03 260);
-  --navy: oklch(0.24 0.07 260);
-  --charcoal: oklch(0.28 0.02 260);
+  --border: oklch(0.88 0.012 82);
+  --input: oklch(0.88 0.012 82);
+  --ring: oklch(0.72 0.12 78);
+  --gold: oklch(0.72 0.12 78);
+  --gold-light: oklch(0.84 0.10 82);
+  --gold-foreground: oklch(0.18 0.04 265);
+  --navy: oklch(0.20 0.06 265);
+  --navy-deep: oklch(0.14 0.05 265);
+  --charcoal: oklch(0.26 0.02 260);
+  --gradient-navy: linear-gradient(135deg, oklch(0.14 0.05 265) 0%, oklch(0.22 0.07 262) 55%, oklch(0.28 0.06 258) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.72 0.12 78) 0%, oklch(0.84 0.10 82) 100%);
+  --gradient-ivory: linear-gradient(180deg, oklch(0.985 0.006 85) 0%, oklch(0.955 0.012 82) 100%);
+  --shadow-elegant: 0 30px 60px -30px oklch(0.18 0.04 265 / 0.35);
+  --shadow-gold: 0 20px 50px -20px oklch(0.72 0.12 78 / 0.35);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -151,9 +158,27 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background-image:
+      radial-gradient(circle at 0% 0%, oklch(0.72 0.12 78 / 0.05), transparent 40%),
+      radial-gradient(circle at 100% 100%, oklch(0.20 0.06 265 / 0.05), transparent 40%);
+    background-attachment: fixed;
   }
   h1, h2, h3, .font-serif {
     font-family: var(--font-serif);
     letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-navy { background-image: var(--gradient-navy); }
+  .bg-gradient-gold { background-image: var(--gradient-gold); }
+  .bg-gradient-ivory { background-image: var(--gradient-ivory); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .text-gradient-gold {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
