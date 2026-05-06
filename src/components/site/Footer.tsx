@@ -6,7 +6,7 @@ export function Footer() {
   const { t } = useT();
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-gradient-navy text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2 font-serif text-xl">
