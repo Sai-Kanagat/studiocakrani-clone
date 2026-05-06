@@ -115,8 +115,10 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:24px_24px]" />
+      <section className="relative overflow-hidden bg-gradient-navy text-primary-foreground">
+        <div className="absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:24px_24px]" />
+        <div className="pointer-events-none absolute -top-40 -right-40 h-[480px] w-[480px] rounded-full bg-accent/15 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[480px] w-[480px] rounded-full bg-accent/10 blur-3xl" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:py-28 lg:px-8">
           <div>
             <p className="font-serif text-sm uppercase tracking-[0.3em] text-accent">
@@ -151,10 +153,11 @@ function Home() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-lg border border-accent/40" />
+            <div className="absolute -inset-1 rounded-lg bg-gradient-gold opacity-40 blur-2xl" />
             <img
               src={portrait}
               alt="Kujtim Cakrani — Avokat dhe Themelues, Studio Ligjore Cakrani"
-              className="relative h-[460px] w-full rounded-lg object-cover shadow-2xl sm:h-[560px]"
+              className="relative h-[460px] w-full rounded-lg object-cover shadow-elegant sm:h-[560px]"
               loading="eager"
             />
             <div className="absolute -bottom-5 left-6 right-6 rounded-md bg-card px-5 py-3 text-card-foreground shadow-xl sm:left-10 sm:right-auto">
@@ -223,7 +226,8 @@ function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="bg-primary py-20 text-primary-foreground">
+      <section className="relative overflow-hidden bg-gradient-navy py-20 text-primary-foreground">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.05] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:24px_24px]" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center font-serif text-3xl sm:text-4xl">
             {t("testimonials.title")}
@@ -249,7 +253,7 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-accent py-16 text-accent-foreground">
+      <section className="bg-gradient-gold py-16 text-accent-foreground shadow-gold">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:px-6 lg:flex-row lg:px-8">
           <h2 className="font-serif text-2xl sm:text-3xl">
             {t("contact.subtitle")}
