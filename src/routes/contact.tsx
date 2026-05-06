@@ -4,6 +4,7 @@ import { z } from "zod";
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 import { useT } from "@/i18n/LanguageProvider";
+import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -72,9 +73,18 @@ function ContactPage() {
       return;
     }
     setSubmitting(true);
-    // Placeholder: simulate send. Wire to backend later.
-    await new Promise((r) => setTimeout(r, 600));
+    const { error } = await supabase.from("contact_messages").insert({
+      name: parsed.data.name,
+      email: parsed.data.email,
+      phone: parsed.data.phone || null,
+      subject: parsed.data.subject,
+      message: parsed.data.message,
+    });
     setSubmitting(false);
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
     toast.success(t("contact.success"));
     (e.target as HTMLFormElement).reset();
   };
