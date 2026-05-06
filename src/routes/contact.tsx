@@ -81,8 +81,9 @@ function ContactPage() {
 
   return (
     <>
-      <section className="bg-primary py-20 text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-navy py-20 text-primary-foreground">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:24px_24px]" />
+        <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl sm:text-5xl">{t("contact.title")}</h1>
           <div className="mx-auto mt-4 h-px w-16 bg-accent" />
           <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
