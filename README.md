@@ -13,7 +13,7 @@ This project builds a static client bundle to `dist/client` and uses an SPA rewr
 
 1. Import the GitHub repo in Vercel and allow framework auto-detection (Vite/Other).
 2. Set **Build Command** to `npm run build` and **Output Directory** to `dist/client`.
-3. Add the environment variables from `.env` in Vercel Project Settings. `VITE_`-prefixed values are exposed to the client, while non-prefixed values are for server/runtime usage.
+3. Add the environment variables from the repo root `.env` (or your Supabase project values) in Vercel Project Settings. `VITE_`-prefixed values are exposed to the client, while non-prefixed values are for server/runtime usage.
    - `SUPABASE_PUBLISHABLE_KEY`
    - `SUPABASE_URL`
    - `VITE_SUPABASE_PROJECT_ID`
